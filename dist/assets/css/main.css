@@ -38,9 +38,6 @@ html {
   font-family: "Manrope";
   overflow-x: hidden; }
 
-body {
-  overflow-x: hidden; }
-
 *::before, *::after {
   content: "";
   position: absolute; }
@@ -639,7 +636,9 @@ ul {
       font-size: 16px; } }
 
 .header__title-block {
-  margin-top: -11.5vh; }
+  margin-top: -11.5vh;
+  position: relative;
+  z-index: 5; }
   @media (max-width: 580px) {
     .header__title-block {
       margin-top: 42px; } }
@@ -687,13 +686,22 @@ ul {
       -ms-flex-pack: center;
           justify-content: center; }
   .header__img-col img {
-    min-width: 257px; }
-    @media (max-width: 1920px) {
-      .header__img-col img {
-        width: calc(160px + 18vw); } }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%; }
   @media (max-width: 580px) {
     .header__img-col {
       width: 100%; } }
+
+.header__img-wrap {
+  width: 100%;
+  max-width: 505px;
+  min-width: 257px; }
+  .header__img-wrap div {
+    padding-bottom: 105%;
+    position: relative; }
 
 .header__logo-col {
   width: 50%;
@@ -706,7 +714,9 @@ ul {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative;
+  z-index: 5; }
   .header__logo-col img {
     width: calc(44px + 17vw);
     min-width: 190px; }
@@ -857,7 +867,8 @@ ul {
         background: -o-radial-gradient(50% 50%, 36.19% 50%, rgba(82, 82, 165, 0) 0%, #1D1D1F 100%);
         background: radial-gradient(36.19% 50% at 50% 50%, rgba(82, 82, 165, 0) 0%, #1D1D1F 100%);
         background-size: 100% 100%;
-        background-position: -20px; } }
+        background-position: -20px;
+        display: none; } }
 
 .step-1-1-decoration {
   position: absolute;

@@ -167,3 +167,5 @@ showMoreVideos.onclick = function(){
     
 
 }
+
+AOS.init();

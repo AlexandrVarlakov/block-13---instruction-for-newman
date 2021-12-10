@@ -14,7 +14,7 @@ html{
 	overflow-x: hidden;
 }
 body{
-	overflow-x: hidden;
+	
 }
 
 *::before ,*::after{
@@ -641,6 +641,8 @@ ul{
 
 .header__title-block{
 	margin-top: -11.5vh;
+	position: relative;
+	z-index: 5;
 	@media (max-width: 580px){
 		margin-top: 42px;
 	}
@@ -668,12 +670,14 @@ ul{
 	justify-content: center;
 
 	img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+	
 
-		@media (max-width: 1920px){
-			width: calc(160px + 18vw);
-		}
-
-		min-width: 257px;
+		
 	}
 
 	@media (max-width: 580px){
@@ -681,13 +685,24 @@ ul{
 	}
 	
 }
+
+.header__img-wrap{
+	width: 100%;
+	max-width: 505px;
+	min-width: 257px;
+	div{
+		padding-bottom: 105%;
+		position: relative;
+	}
+}
 .header__logo-col{
 	width: 50%;
 	padding-top: 13vh;
 	padding-left: 15px;
 	display: flex;
 	justify-content: center;
-
+	position: relative;
+	z-index: 5;
 	img{
 		width: calc(44px + 17vw);
 
@@ -869,7 +884,7 @@ ul{
 			background-size: 100% 100%;
 			
 			background-position: -20px;
-			
+			display: none;
 		}
 	}
 
